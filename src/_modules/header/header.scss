@@ -2,6 +2,27 @@
 
     $h: &;
 
+
+    position: fixed;
+    top: 0;
+    height: 10vh;
+
+    @include mq(md) {
+        position: absolute;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+    }
+
+    &__nav {
+
+    }
+
     &__hamburguer {
         cursor: pointer;
         width: 25px;
