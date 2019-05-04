@@ -1,0 +1,45 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+  main.club
+    section.club__hero
+      .club__hero__background
+        img(src="/images/club/hero.jpg")
+      .club__hero__container
+        .club__hero__wrapper
+          h2.club__hero__title
+            |bienvenidos a
+            br
+            span aguas arriba club
+          p.club__hero__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          a.club__hero__button(href="#content")
+            span
+    section.club__content#content
+      .club__content__container
+        .container
+          .row
+            .col-xs-24
+              .club__content__wrapper
+                a(href="/travel")
+                  .club__content__group.club__content__group--left
+                    .club__content__group-wrapper
+                      h3.club__content__title viajá con nosotros
+                      p.club__content__text Elegí entre las multiples opciones
+                      .club__content__button
+                        span.-horizontal
+                        span.-vertical
+                a(href="/academia")
+                  .club__content__group.club__content__group--right
+                    .club__content__group-wrapper
+                      h3.club__content__title academia
+                      p.club__content__text 
+                        |Academia Internacional de Pesca con
+                        br
+                        |Mosca Aguas Arriba Latinoamérica
+                      .club__content__button
+                        span.-horizontal
+                        span.-vertical

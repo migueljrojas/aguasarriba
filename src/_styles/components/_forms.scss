@@ -1,34 +1,41 @@
-._form{
-    input,
-    textarea{
+._form {
+    &__input,
+    &__textarea{
         outline:none;
-        background: $lightGray;
-        border-radius:5px;
+        background: $white;
         width:100%;
         font-size: 14px;
-        font-weight: 600;
-        padding: $base/4;
-        color:$darkGray;
-        margin-bottom: $base/4;
+        padding: 15px;
+        color: $blue;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.15);
+        border: none;
 
-        &:last-child{
-            margin-bottom: 0;
+        &::placeholder{
+            color: $blue;
         }
     }
 
-    label{
-        color:$darkGray;
+
+    &__textarea {
+        height: 100px;
     }
 
-    ::placeholder{
-        opacity:.3;
+    &__label{
+        color: $blue;
     }
-    ._submit{
+
+
+    &._submit{
         color:#fff;
-        background: $link;
-        width: 300px;
+        background: $blue;
+        width: 150px;
         transition: all .3s ease;
-
+        padding: 15px 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        font-size: 14px;
         &:hover{
             background: $linkHover;
         }

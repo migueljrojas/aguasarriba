@@ -1,0 +1,35 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+  main.programas
+    section.programas__hero
+      .programas__hero__background
+        img(src="/images/programas/hero.jpg")
+      .programas__hero__container
+          .programas__hero__wrapper
+              .programas__hero__video
+                  iframe(src="https://www.youtube.com/embed/DQuhA5ZCV9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              .programas__hero__video-information
+                h3.programas__hero__video-title programa #16
+                p.programas__hero__video-te Pescando en Florencia, Santa Fé
+    section.programas__interstitial
+      .container.programas__interstitial__container
+        .row
+          .col-xs-24.col-md-14
+            h2.programas__interstitial__title Aguas Arriba es un programa de pesca con mosca hecho por pescadores para pescadores. Viajamos a través de lifares increíbles donde conocemos a lugareños que muiestran la simplicidad de su forma de vida y contemplamos las ecperiencas de pescadores expertos en la pesca con mosca, conviviendo con paisajes espectaculares.
+            p.programas__interstitial__text El contacto con la naturaleza nos ayuda a fortalecer nuestra convicción y apoyo para el desarrollo sostenible, la lucha contra el cambio climáticom la degensa de la biodiversidad, #RIOSSINREPRESAS y el respeto por todas las culturas a través de un estilo de vida posible y diferente. Eso es Aguas Arriba.
+      .programas__interstitial__image
+        img(src="/images/programas/interstitial.jpg")
+      .programas__interstitial__emblem
+        img(src="/images/emblem.png")
+    section.programas__cta
+      .programas__cta__wrapper
+        p.programas__cta__text Se emite a través de ESPN para Latino América. Desde México a Argentina y Chile y a todos los países de habla hispana por ESPN HD, ESPN2, ESPN + y ESPNplay.com y tambiém Online en nuestra web.
+        a.programas__cta__button(href="#")
+          |consulta la programación
+          br
+          |de tu ciudad en @espn

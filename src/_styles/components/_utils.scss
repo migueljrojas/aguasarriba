@@ -26,6 +26,13 @@
     }
 }
 
+.nopadding-md > [class*="col-"] {
+    @include mq(md){
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 .nopadding-selective > .nopad-col {
     padding-left: 0 !important;
     padding-right: 0 !important;

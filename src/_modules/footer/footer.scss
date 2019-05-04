@@ -1,3 +1,112 @@
 .footer {
+  &__form {
+    background: $blueGray;
+    padding: 8% 0;
+
+    &__title {
+      color: $blue;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__sponsors {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include mq(md) {
+    }
+  }
+
+  &__sponsor {
+    display: flex;
+    align-items: center;
+    width: 21%;
+
+    @include mq(md) {
+      width: 14%;
+    }
+
+    &:not(:last-child) {
+      @include mq(md) {
+        padding-right: 20px;
+      }
+    }
+
+    &:not(:first-child) {
+      @include mq(md) {
+        padding-left: 20px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__social {
+    background: $darkBlue;
+    padding: 30px 0;
+  }
+  
+  &__wrapper {
     
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__dante {
+    margin: 0;
+    color: $white;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__copyright {
+    color: $white;
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social-networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    i {
+      color: $white;
+      font-size: 20px;
+    }
+  }
 }

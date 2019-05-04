@@ -1,0 +1,226 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+  main.travel
+    section.travel__hero
+      .travel__hero__background
+        img(src="/images/travel/hero.jpg")
+      .travel__hero__container
+        .travel__hero__wrapper
+          h2.travel__hero__title
+            span viajá con nosotros
+          p.travel__hero__text Elegí entre las múltiples opciones
+    section.travel__content
+      .container
+        .row.nopadding
+          .col-xs-12.col-md-6
+            .travel__content__wrapper.travel__content__wrapper--col1(data-target="col1")
+              .travel__content__background.travel__content__background--col1
+              .travel__content__logo
+                img(src="/images/travel/logo-1.png")
+          .col-xs-12.col-md-6
+            .travel__content__wrapper.travel__content__wrapper--col2(data-target="col2")
+              .travel__content__background.travel__content__background--col2
+              .travel__content__logo
+                img(src="/images/travel/logo-2.png")
+          .col-xs-12.col-md-6
+            .travel__content__wrapper.travel__content__wrapper--col3(data-target="col3")
+              .travel__content__background.travel__content__background--col3
+              .travel__content__logo
+                img(src="/images/travel/logo-3.png")
+          .col-xs-12.col-md-6
+            .travel__content__wrapper.travel__content__wrapper--col4(data-target="col4")
+              .travel__content__background.travel__content__background--col4
+              .travel__content__logo
+                img(src="/images/travel/logo-4.png")
+  
+      div.travel__content__bottom-column(data-content="col1")
+        .container.travel__content__container
+          .row
+            .col-xs-24
+              .row.nopadding-md
+                .col-xs-24.col-md-12
+                  .travel__content__group
+                    h2.travel__content__title estancia tecka lodge
+                    p.travel__content__text Noviembre 23 al 30 de 2019
+                    p.travel__content__text Spring Creek - Río Corcovado
+                    p.travel__content__text Especies: trucha arcoiris / marrón / fontinails
+                    p.travel__content__text Estancia Tecka lodge - Chubut Patagonia Argentina
+                    p.travel__content__text 6 días de pesca full
+                    p.travel__content__text.-dark Consultar valir de especial Club Aguas Arriba
+                    p.travel__content__text Servicio de lodge todo incluido, no incluye pasajes a Bariloche/Esquel
+                    a.travel__content__button(href="#") Consultar
+  
+                .col-xs-24.col-md-12
+                  .travel__content__image
+                    img(src="/images/travel/tecka-main.jpg")
+        .container-fluid
+          .row.nopadding
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-1.jpg")
+                  img(src="/images/travel/tecka-1.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-2.jpg")
+                 img(src="/images/travel/tecka-2.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-3.jpg")
+                  img(src="/images/travel/tecka-3.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-4.jpg")
+                  img(src="/images/travel/tecka-4.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-5.jpg")
+                  img(src="/images/travel/tecka-5.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.tecka-gallery(href="/images/travel/tecka-6.jpg")
+                  img(src="/images/travel/tecka-6.jpg")
+
+      div.travel__content__bottom-column(data-content="col2")
+        .container.travel__content__container
+          .row
+            .col-xs-24
+              .row.nopadding-md
+                .col-xs-24.col-md-12
+                  .travel__content__group
+                    h2.travel__content__title Patagonia River Guides
+                    p.travel__content__text Noviembre 23 al 30 de 2019
+                    p.travel__content__text Spring Creek - Río Corcovado
+                    p.travel__content__text Especies: trucha arcoiris / marrón / fontinails
+                    p.travel__content__text Estancia Tecka lodge - Chubut Patagonia Argentina
+                    p.travel__content__text 6 días de pesca full
+                    p.travel__content__text.-dark Consultar valir de especial Club Aguas Arriba
+                    p.travel__content__text Servicio de lodge todo incluido, no incluye pasajes a Bariloche/Esquel
+                    a.travel__content__button(href="#") Consultar
+                .col-xs-24.col-md-12
+                  .travel__content__image
+                    img(src="/images/travel/patagonia-main.jpg")
+        .container-fluid
+          .row.nopadding
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-1.jpg")
+                  img(src="/images/travel/patagonia-1.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-2.jpg")
+                 img(src="/images/travel/patagonia-2.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-3.jpg")
+                  img(src="/images/travel/patagonia-3.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-4.jpg")
+                  img(src="/images/travel/patagonia-4.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-5.jpg")
+                  img(src="/images/travel/patagonia-5.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.patagonia-gallery(href="/images/travel/patagonia-6.jpg")
+                  img(src="/images/travel/patagonia-6.jpg")
+
+      div.travel__content__bottom-column(data-content="col3")
+        .container.travel__content__container
+          .row
+            .col-xs-24
+              .row.nopadding-md
+                .col-xs-24.col-md-12
+                  .travel__content__group
+                    h2.travel__content__title Estancia María Behety
+                    p.travel__content__text Noviembre 23 al 30 de 2019
+                    p.travel__content__text Spring Creek - Río Corcovado
+                    p.travel__content__text Especies: trucha arcoiris / marrón / fontinails
+                    p.travel__content__text Estancia Tecka lodge - Chubut Patagonia Argentina
+                    p.travel__content__text 6 días de pesca full
+                    p.travel__content__text.-dark Consultar valir de especial Club Aguas Arriba
+                    p.travel__content__text Servicio de lodge todo incluido, no incluye pasajes a Bariloche/Esquel
+                    a.travel__content__button(href="#") Consultar
+                .col-xs-24.col-md-12
+                  .travel__content__image
+                    img(src="/images/travel/behety-main.jpg")
+        .container-fluid
+          .row.nopadding
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-1.jpg")
+                  img(src="/images/travel/behety-1.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-2.jpg")
+                 img(src="/images/travel/behety-2.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-3.jpg")
+                  img(src="/images/travel/behety-3.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-4.jpg")
+                  img(src="/images/travel/behety-4.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-5.jpg")
+                  img(src="/images/travel/behety-5.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.behety-gallery(href="/images/travel/behety-6.jpg")
+                  img(src="/images/travel/behety-6.jpg")
+
+      div.travel__content__bottom-column(data-content="col4")
+        .container.travel__content__container
+          .row
+            .col-xs-24
+              .row.nopadding-md
+                .col-xs-24.col-md-12
+                  .travel__content__group
+                    h2.travel__content__title golden dorado river cruiser
+                    p.travel__content__text Noviembre 23 al 30 de 2019
+                    p.travel__content__text Spring Creek - Río Corcovado
+                    p.travel__content__text Especies: trucha arcoiris / marrón / fontinails
+                    p.travel__content__text Estancia Tecka lodge - Chubut Patagonia Argentina
+                    p.travel__content__text 6 días de pesca full
+                    p.travel__content__text.-dark Consultar valir de especial Club Aguas Arriba
+                    p.travel__content__text Servicio de lodge todo incluido, no incluye pasajes a Bariloche/Esquel
+                    a.travel__content__button(href="#") Consultar
+                .col-xs-24.col-md-12
+                  .travel__content__image
+                    img(src="/images/travel/golden-main.jpg")
+        .container-fluid
+          .row.nopadding
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-1.jpg")
+                  img(src="/images/travel/golden-1.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-2.jpg")
+                 img(src="/images/travel/golden-2.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-3.jpg")
+                  img(src="/images/travel/golden-3.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-4.jpg")
+                  img(src="/images/travel/golden-4.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-5.jpg")
+                  img(src="/images/travel/golden-5.jpg")
+            .col-xs-12.col-sm-8.col-md-4
+              .travel__content__image-small
+                a.golden-gallery(href="/images/travel/golden-6.jpg")
+                  img(src="/images/travel/golden-6.jpg")
+
+

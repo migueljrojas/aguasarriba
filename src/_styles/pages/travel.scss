@@ -1,0 +1,396 @@
+.travel {
+  &__hero {
+    background: $blueGray;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+
+    @include mq(md) {
+      height: 700px;
+    }
+
+    &__background {
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      
+      @include mq(md) {
+        width: 100%;
+      }
+      
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 70%;
+        // mix-blend-mode: multiply;
+        background: linear-gradient(to bottom, transparentize($black, .4), transparent);
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 60%;
+        // mix-blend-mode: multiply;
+        background: linear-gradient(to top, $blueGray, transparent);
+      }
+
+      img {
+        width: auto;
+        // height: 50vh;
+
+        @include mq(md) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &__container {
+      padding-top: 200px;
+      position: relative;
+      z-index: 2;
+
+      @include mq(md) {
+        padding-bottom: 90px;
+        padding-top: 250px;
+      }
+    }
+
+    &__wrapper {
+      height: 300px;      
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: $white;
+
+      @include mq(md) {
+        width: 45%;
+        position: relative;
+        height: auto;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 32px;
+      margin-top: 0;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &__text {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    $c: &;
+
+    background: $blueGray;
+    
+    &__wrapper {
+      @include trans;
+
+      position: relative;
+      height: 100%;
+      min-width: 100%;
+      cursor: pointer;
+      border: 5px solid transparent;
+
+      @include mq(md) {
+        border: none;
+      }
+
+      &--col1,
+      &--col3 {
+        &.-active {
+          @include mq(md) {
+            transform: translateX(-5px);
+          }
+        }
+      }
+
+      &--col2,
+      &--col4 {
+        @include mq(md) {
+          transform: translate3d(0, 7%, 0);
+        }
+
+        &.-active {
+          @include mq(md) {
+            transform: translate3d(-5px, 7%, 0);
+          }
+        }
+      }
+
+      &.-active {
+        border: 5px solid $white;
+
+        @include mq(md) {
+          z-index: 5;
+          box-sizing: content-box;
+        }
+
+        #{$c}__background { 
+          background-color: #555;
+          
+          &:after {
+            @include mq(md) {
+              filter: grayscale(0);
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+    
+    &__background {
+      
+      position: relative;
+      width: 100%;
+      height: 0;
+      background-color: $blue;
+      overflow: hidden;
+      padding-bottom: 125%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+
+        @include mq(md) {
+          opacity: .3;
+          mix-blend-mode: overlay;
+          filter: grayscale(1);
+        }
+      }
+
+      
+      &--col1 {
+        &:after {
+          background: url("/images/travel/cuadro-1.jpg") no-repeat center center / cover;
+        }
+        
+        &:hover,
+        &:focus,
+        &:active {
+          @include mq(md) {
+            // border: 5px solid $white;
+            // z-index: 5;
+            // transform: translateX(-5px);
+            background-color: #555;
+          }
+  
+          &:after {
+            @include mq(md) {
+              filter: grayscale(0);
+              opacity: .7;
+            }
+          }
+        }
+      }
+
+      &--col2 {
+        &:hover {
+          @include mq(md) {
+            // border: 5px solid $white;
+            // z-index: 5;
+            // transform: translateY(7%);
+            background-color: #555;
+          }
+
+          &:after {
+            @include mq(md) {
+              filter: grayscale(0);
+              opacity: .7;
+            }
+          }
+        }
+
+        &:after {
+          background: url("/images/travel/cuadro-2.jpg") no-repeat center center / cover;
+        }
+      }
+
+      &--col3 {
+        &:after {
+          background: url("/images/travel/cuadro-3.jpg") no-repeat center center / cover;
+        }
+
+        &:hover {
+          @include mq(md) {
+            // border: 5px solid $white;
+            // z-index: 5;
+            // transform: translateX(-5px);
+            background-color: #555;
+
+            &:after {
+              @include mq(md) {
+                filter: grayscale(0);
+                opacity: .7;
+              }
+            }
+          }
+        }
+      }
+
+      &--col4 {
+        &:hover {
+          @include mq(md) {
+            // border: 5px solid $white;
+            // transform: translateY(7%);
+            // z-index: 5;
+            background-color: #555;
+          }
+
+          &:after {
+            @include mq(md) {
+              filter: grayscale(0);
+              opacity: .7;
+            }
+          }
+        }
+
+        &:after {
+          background: url("/images/travel/cuadro-4.jpg") no-repeat center center / cover;
+        }
+      }
+    }
+
+
+    &__logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 50%;
+      z-index: 5;
+      mix-blend-mode: screen;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__bottom-column {
+      @include trans;
+
+      display: none;
+
+      &.-active {
+        display: block;
+        margin-top: 20px;
+
+        @include mq(md) {
+          margin-top: 100px;
+        }
+      }
+    }
+
+    &__container {
+      margin-bottom: 100px;
+    }
+
+    &__group {
+      margin-bottom: 40px;
+      
+      @include mq(md) {
+        padding-right: 40px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      color: $blue;
+      text-transform: uppercase;
+      margin-top: 40px;
+      margin-bottom: 60px;
+      font-weight: 600;
+      font-size: 22px;
+
+      @include mq(md) {
+        font-size: 26px;
+      }
+    }
+
+    &__text {
+      color: $blue;
+      margin: 0;
+      margin-bottom: 10px;
+      
+      @include mq(md) {
+        font-size: 18px;
+      }
+
+      &.-dark {
+        margin: 40px 0;
+        font-weight: 600;
+      }
+    }
+
+    &__button {
+      display: block;
+      border: 1px solid $blue;
+      margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 600;
+      color: $blue;
+      text-transform: uppercase;
+      
+      @include mq(md) {
+        font-size: 20px;
+        width: 40%;
+
+      }
+    }
+
+    &__image {
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__image-small {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 80%;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+  }
+}

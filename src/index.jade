@@ -2,3 +2,57 @@ extends _layouts/base
 
 block content
     main.home
+        section.home__hero
+            .home__hero__background
+                img(src="/images/home/hero.jpg")
+            .home__hero__container
+                .home__hero__wrapper
+                    .home__hero__video
+                        iframe(src="https://www.youtube.com/embed/DQuhA5ZCV9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    a.home__hero__chapters-button(href="/programas")
+                        span
+                        p 
+                            |ver capítulos 
+                            br
+                            |anteriores
+        section.home__about
+            .container.home__about__container
+                .row
+                    .col-xs-24.col-md-10
+                        h3.home__about__title Luego de Años de pescar la Patagonia, y retratar sus recónditos lugares, hemos ido ampliando horizontes, conociendo ms gente, experimentando nuevas técnicas y mas lugares. Otras especies y otras latitudes, por eso, Patagonic Waters es ahora, Aguas Arriba.
+                        p.home__about__text Estamos convencidos que este nombre, engloba toda la evolución que hemos hecho como pecadores a lo largo de nuestros años y claramente incluye, a la infinidad de amigos nuevos que hemos cosechado, gracias a esta noble práctica de las pesca con mosca.
+                        p.home__about__text A partir de ahora, AGUAS ARRIBA, es una programa de TV realizado 100% por pescadores para pascadores. Con otra impronta, incluyendo todas las opciones Latinoamericanas, más amigos, más especies, pero con la misma pasión de siempre.
+            .home__about__image
+                img(src="/images/home/about-us.png")
+        section.home__programas
+            .home__programas__container
+                .home__programas__title 
+                    |acompañanos, 
+                    br
+                    |pesquemos, 
+                    br 
+                    span aguas arriba
+                a.home__programas__button(href="/programas") ver todos los programas
+        section.home__shop
+            .container
+                .row
+                    .col-xs-24.col-md-18.col-md-offset-3
+                        .row
+                            .col-xs-24.col-md-6.home__shop__column
+                                .home__shop__container
+                                    h2.home__shop__title 
+                                        |visita
+                                        br
+                                        |nuestro
+                                        br
+                                        span shop
+                                    a.home__shop__button(href="/shop") ver productos
+                            .col-xs-24.col-md-18.home__shop__column
+                                .home__shop__image
+                                    img(src="/images/home/cta-shop.png")
+        section.home__instagram
+            .home__instagram__container
+                .home__instagram__images
+                a.home__instagram__hashtag(href="https://www.instagram.com/aguasarribaespn/" target="_blank")
+                    i.fa.fa-instagram
+                    p aguasarribaespn
