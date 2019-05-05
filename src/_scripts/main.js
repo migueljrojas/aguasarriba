@@ -10,6 +10,7 @@ var Slider = require('../_modules/slider/slider');
 var InstagramImages = require('./instagram-images');
 var DataSwitcher = require('../_modules/data-switcher/data-switcher');
 var DataToggle = require('../_modules/data-switcher/data-toggle');
+var ShowList = require('./showList');
 
 
 $(function() {
@@ -21,4 +22,5 @@ $(function() {
     new InstagramImages();
     new DataSwitcher();
     new DataToggle();
+    new ShowList();
 });

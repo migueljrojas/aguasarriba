@@ -1,10 +1,15 @@
-.programas {
+.academia {
   overflow: hidden;
 
   &__hero {
     position: relative;
     background: $blueGray;
+    height: 90vh;
 
+    @include mq(md) {
+      min-height: 850px;
+    }
+    
     &__background {
       overflow: hidden;
       z-index: 1;
@@ -13,7 +18,18 @@
       @include mq(md) {
         width: 100%;
       }
-      
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 70%;
+        background: linear-gradient(to bottom, transparentize($black, .4), transparent);
+        z-index: 2;
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -21,7 +37,6 @@
         right: 0;
         bottom: 0;
         height: 50%;
-        // mix-blend-mode: multiply;
         background: linear-gradient(to top, $blueGray, transparent);
       }
   
@@ -43,7 +58,7 @@
 
       @include mq(md) {
         padding-bottom: 90px;
-        padding-top: 250px;
+        padding-top: 230px;
       }
     }
 
@@ -59,6 +74,19 @@
         height: auto;
       }
     }
+
+    &__title {
+      text-align: center;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
     
     &__video {
       border: 5px solid $white;
@@ -67,10 +95,11 @@
       height: 0;
       margin-bottom: 20px;
       position: relative;
+      box-shadow: 0 10px 20px 1px rgba(0,0,0,.15);
 
       @include mq(md) {
         padding-bottom: 420px;
-        width: 800px;
+        width: 700px;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -86,128 +115,42 @@
         border: none;
       }
     }
-
-    &__video-information {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    &__video-title {
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $blue;
-      margin-bottom: 0;
-    }
-
-    &__video-text {
-      margin-top: 0;
-      font-size: 18px;
-
-      @include mq(md) {
-        font-size: 24px;
-      }
-    }
-
-    &__tabs {
-      margin-bottom: 40px;
-      
-      @include mq(md) {
-        display: flex;
-        justify-content: center;
-        
-      }
-    }
-
-    &__tab {
-      border: 1px solid $blue;
-      text-align: center;
-      padding: 15px 0;
-      width: 100%;
-      display: block;
-
-      @include mq(md) {
-        width: 300px;
-      }
-
-      p {
-        text-transform: uppercase;
-        font-weight: 600;
-        color: $blue;
-        margin: 0;
-      }
-
-      &.-active {
-        background: $blue;
-
-        p {
-          color: $white;
-
-        }
-      }
-    }
-
-    &__column {
-      margin-bottom: 30px;
-    }
-
-    &__programa {
-      background: $white;
-      display: block;
-      width: 100%;
-    }
-
-    &__programa-video {
-      border: 5px solid $white;
-      height: 0;
-      padding-bottom: 56.5%;
-      width: 100%;
-      overflow: hidden;
-      margin-bottom: 10px;
-      position: relative;
-      pointer-events: none;
-
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    }
-
-    &__programa-title {
-      text-align: center;
-      color: $blue;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
-
-    &__programa-text {
-      text-align: center;
-      padding-bottom: 20px;
-      margin-top: 0;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 12px;
-
-      @include mq(md) {
-        font-size: 16px;
-        height: 80px;
-      }
-    }
   }
 
-  &__interstitial {
+  &__about {
+    background: $blueGray;
     position: relative;
-    padding-top: 40px;
+
+    &__paises  {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      position: relative;
+      margin-bottom: 40px;
+
+      &:after {
+        content: '2019';
+        position: absolute;
+        width: 200px;
+        left: 0;
+        font-size: 150px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+        color: $white;
+        font-weight: 600;
+      }
+
+      img {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 77%;
+        z-index: 2;;
+      }
+    }
 
     &__container {
       @include mq(md) {
@@ -217,29 +160,6 @@
         left: 0;
         right: 0;
         margin: auto;
-      }
-    }
-
-    &__title {
-      color: $blue;
-      font-weight: 600;
-      line-height: 1.5;
-      margin-bottom: 40px;
-      margin-top: 0;
-      font-size:  20px;
-
-      @include mq(md) {
-        font-size: 26px;
-      }
-    }
-
-    &__text {
-      color: $blue;
-      line-height: 1.6;
-      margin-bottom: 40px;
-
-      @include mq(md) {
-        margin-bottom: 0;
       }
     }
 
@@ -259,30 +179,31 @@
 
         @include mq(md) {
           height: auto;
-          width: 35%;
+          width: 55%;
         }
       }
     }
 
-    &__emblem {
-      position: absolute;
-      top: -50px;
-      z-index: -1;
-      left: 5%;
-      width: 50%;
+    &__title {
+      margin-bottom: 60px;
+      margin-top: 60px;
+      font-size: 22px;
+      line-height: 1.6;
+      font-weight: 600;
+      color: $blue;
+    }
 
-      @include mq(md) {
-        width: auto;
-      }
+    &__text {
+      margin-top: 0;
+      margin-bottom: 20px;
 
-      img {
-        width: 100%;
-        height: auto;
+      &:last-child {
+        margin-bottom: 120px;
       }
     }
   }
 
-  &__cta {
+  &__interstitial {
     position: relative;
     // height: 450px;
     background-color: $blue;
@@ -294,7 +215,7 @@
     &:after {
       content: '';
       mix-blend-mode: overlay;
-      background: url("/images/programas/cta.jpg") no-repeat center bottom / cover;
+      background: url("/images/academia/interstitial.jpg") no-repeat center bottom / cover;
       position: absolute;
       left: 0;
       top: 0;
@@ -303,23 +224,19 @@
       opacity: .3;
     }
 
-    &__wrapper {
-      margin-left: auto;
-      margin-right: auto;
+    &__text {
+      width: 100%;
       display: block;
       text-align: center;
       color: $white;
-      width: 90%;
-      
-      @include mq(md) {
-        width: 60%;
-      }
-    }
-
-    &__text {
       margin-bottom: 40px;
       font-size: 18px;
       margin-top: 0;
+      text-transform: uppercase;
+
+      span {
+        font-weight: 600;
+      }
     }
 
     &__button {

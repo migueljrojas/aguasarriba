@@ -5,4 +5,104 @@ block config
   - var baseUrl = '../'
 
 block content
-  p tienda-pedido page
+  main.tienda-pedido
+    section.tienda-pedido__hero
+      .tienda-pedido__hero__background
+      .tienda-pedido__hero__container
+        .tienda-pedido__hero__wrapper
+          .tienda-pedido__hero__logo
+            img(src="/images/shop/ansilta-big.png")
+          p.tienda-pedido__hero__text Accedé a productos Ansilta, customizados con Aguas Arriba, y formá parte de nuestra comunidad.
+
+    section.tienda-pedido__form
+      form.container
+        .row
+          .col-xs-24.col-md-8
+            input.tienda-pedido__form__input._form__input(type="text" placeholder="Nombre")
+          .col-xs-24.col-md-8
+            input.tienda-pedido__form__input._form__input(type="text" placeholder="Apellido")
+          .col-xs-24.col-md-8
+            input.tienda-pedido__form__input._form__input(type="email" placeholder="Email")
+          .col-xs-24.col-md-6
+            .tienda-pedido__form__wrapper
+              .tienda-pedido__form__logo
+                img(src="/images/shop/polartec.png")
+              .tienda-pedido__form__container-top
+                .tienda-pedido__form__image
+                  img(src="/images/shop/prod-1.png")
+              .tienda-pedido__form__container-bottom
+                .tienda-pedido__form__content
+                  h2.tienda-pedido__form__title camiseta ares
+                  h3.tienda-pedido__form__subtitle Ansilta - Aguas Arriba
+                  .tienda-pedido__form__price AR$: 2400
+                  select.tienda-pedido__form__select
+                    option(selected hidden disabled) elegir
+                    option 1
+                    option 2
+                    option 3
+          .col-xs-24.col-md-6
+            .tienda-pedido__form__wrapper
+              .tienda-pedido__form__logo
+                img(src="/images/shop/pontetorto.png")
+              .tienda-pedido__form__container-top
+                .tienda-pedido__form__image
+                  img(src="/images/shop/prod-2.png")
+              .tienda-pedido__form__container-bottom
+                .tienda-pedido__form__content
+                  h2.tienda-pedido__form__title buzo primo 2
+                  h3.tienda-pedido__form__subtitle Ansilta - Aguas Arriba
+                  .tienda-pedido__form__price AR$: 2800
+                  select.tienda-pedido__form__select
+                    option(selected hidden disabled) elegir
+                    option 1
+                    option 2
+                    option 3
+          .col-xs-24.col-md-6
+            .tienda-pedido__form__wrapper
+              .tienda-pedido__form__logo
+                img(src="/images/shop/polartec.png")
+              .tienda-pedido__form__container-top
+                .tienda-pedido__form__image
+                  img(src="/images/shop/prod-3.png")
+              .tienda-pedido__form__container-bottom
+                .tienda-pedido__form__content
+                  h2.tienda-pedido__form__title camiseta neyün 2
+                  h3.tienda-pedido__form__subtitle Ansilta - Aguas Arriba
+                  .tienda-pedido__form__price AR$: 2800
+                  select.tienda-pedido__form__select
+                    option(selected hidden disabled) elegir
+                    option 1
+                    option 2
+                    option 3
+          .col-xs-24.col-md-6
+            .tienda-pedido__form__wrapper
+              .tienda-pedido__form__logo
+                img(src="/images/shop/goretex.png")
+              .tienda-pedido__form__container-top
+                .tienda-pedido__form__image
+                  img(src="/images/shop/prod-4.png")
+              .tienda-pedido__form__container-bottom
+                .tienda-pedido__form__content
+                  h2.tienda-pedido__form__title campero ghost 3
+                  h3.tienda-pedido__form__subtitle Ansilta - Aguas Arriba
+                  .tienda-pedido__form__price AR$: 9600
+                  select.tienda-pedido__form__select
+                    option(selected hidden disabled) elegir
+                    option 1
+                    option 2
+                    option 3
+          .col-xs-24
+            .tienda-pedido__form__container
+              .tienda-pedido__form__container-text ¿Eres miembro de AGUAS ARRIBA CLUB?
+              .tienda-pedido__form__input-group
+                .tienda-pedido__form__container-group
+                  input.tienda-pedido__form__radio(type="radio" id="radio1" name="radio")
+                  label.tienda-pedido__form__label(for="radio1") SI
+                .tienda-pedido__form__container-group
+                  input.tienda-pedido__form__radio(type="radio" id="radio2" name="radio")
+                  label.tienda-pedido__form__label(for="radio2") NO
+              .tienda-pedido__form__container-text Entiendo que el hecho de enviar la confirmación de este formulario, me compromete a abonar el importe de la selección realizada en esta planilla. Las instrucciones para el pago se comunicarán vía email oficial de Aguas Arriba una vez procesado el formulario.
+              .tienda-pedido__form__input-group
+                input.tienda-pedido__form__checkbox(type="checkbox" id="chechkbox")
+                label.tienda-pedido__form__label(for="checkbox") Aceptar
+              button.tienda-pedido__form__button(type="submit") enviar
