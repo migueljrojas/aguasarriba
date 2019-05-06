@@ -4,7 +4,7 @@
   &__hero {
     position: relative;
     background: $blueGray;
-    height: 90vh;
+    height: 100vh;
 
     @include mq(md) {
       min-height: 850px;
@@ -42,7 +42,7 @@
   
       img {
         width: auto;
-        height: 50vh;
+        height: 70vh;
 
         @include mq(md) {
           width: 100%;
@@ -52,7 +52,7 @@
     }
 
     &__container {
-      padding-top: 200px;
+      padding-top: 180px;
       position: relative;
       z-index: 2;
 
@@ -80,12 +80,15 @@
       color: $white;
       text-transform: uppercase;
       font-weight: 600;
-      width: 55%;
       margin-left: auto;
       margin-right: auto;
       display: block;
       margin-top: 0;
       margin-bottom: 40px;
+
+      @include mq(md) {
+        width: 55%;
+      }
     }
     
     &__video {
@@ -147,8 +150,13 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
-        width: 77%;
-        z-index: 2;;
+        z-index: 2;
+        width: 100%;
+
+        @include mq(md) {
+          width: 77%;
+
+        }
       }
     }
 
@@ -185,12 +193,16 @@
     }
 
     &__title {
-      margin-bottom: 60px;
-      margin-top: 60px;
       font-size: 22px;
       line-height: 1.6;
+      margin-top: 60px;
       font-weight: 600;
       color: $blue;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        margin-bottom: 60px;
+      }
     }
 
     &__text {
@@ -198,7 +210,11 @@
       margin-bottom: 20px;
 
       &:last-child {
-        margin-bottom: 120px;
+        margin-bottom: 40px;
+
+        @include mq(md) {
+          margin-bottom: 120px;
+        }
       }
     }
   }
@@ -230,9 +246,13 @@
       text-align: center;
       color: $white;
       margin-bottom: 40px;
-      font-size: 18px;
       margin-top: 0;
       text-transform: uppercase;
+      font-size: 22px;
+
+      @include mq(md) {
+        font-size: 24px;
+      }
 
       span {
         font-weight: 600;
@@ -245,10 +265,19 @@
     }
 
     &__wrapper {
-      width: 50%;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include mq(md) {
+          margin-bottom: 0;
+        }
+      }
 
       @include mq(md) {
         width: 20%;
+        padding: 0 10px;
       }
     }
 
@@ -259,18 +288,261 @@
       margin-left: auto;
       margin-right: auto;
       display: block;
+      margin-bottom: 20px;
     }
 
     &__name {
       font-weight: 600;
       text-align: center;
       color: $white;
-      font-size: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
     }
 
     &__email {
       text-align: center;
       color: $white;
+      font-size: 14px;
+    }
+  }
+  
+  &__clinicas {
+    position: relative;
+    padding-top: 40px;
+
+    @include mq(md) {
+      padding-top: 80px;
+    }
+
+    &:after {
+      @include mq(md) {
+        content: '';
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: $blueGray;
+        z-index: -1;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      color: $blue;
+      margin-top: 0;
+      margin-bottom: 60px;
+      font-size: 24px;
+
+      @include mq(md) {
+        font-size: 20px;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &__col-left {
+      @include mq(md) {
+        padding-right: 60px;
+      }
+    }
+
+    &__col-right {
+      background: $blueGray;
+      padding-top: 40px;
+
+      @include mq(md) {
+        padding-left: 60px;
+        padding-top: 0;
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      padding-left: 20px;
+
+      @include mq(md) {
+        padding: 0 20px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: $blueGray;
+      }
+
+      &.-light {
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background: $white;
+        }
+      }
+    }
+
+    &__day {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: 0;
+        width: 11px;
+        height: 11px;
+        background: $blueGray;
+        border-radius: 50%;
+      }
+
+      &.-light {
+        &:after {
+          content: '';
+          position: absolute;
+          left: -25px;
+          top: 0;
+          width: 11px;
+          height: 11px;
+          background: $white;
+          border-radius: 50%;
+        }        
+      }
+    }
+
+    &__day-title {
+      text-transform: uppercase;
+      color: $blue;
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 30px;
+      span {
+        font-weight: 300;
+      }
+    }
+
+    &__group {
+      margin-bottom: 30px;
+    }
+
+    &__hora {
+      display: block;
+      color: $blue;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      color: $blue;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    &__price {
+      font-weight: 600;
+      color: $blue;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__interstitial {
+      width: 100%;
+      background: $blue;
+      position: relative;
+      padding: 60px 10px;
+      text-align: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        top: -15px;
+        background: $blue;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+
+    &__interstitial-text {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0;
+
+      &.-light {
+        font-weight: 300;
+        text-transform: none;
+        margin-top: 20px;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__owner  {
+    padding: 60px 0 40px 0;
+    
+    @include mq(md) {
+      padding: 100px 0 80px 0;
+    }
+
+    &__title {
+      color: $blue;
+      text-transform: uppercase;
+      font-size: 32px;
+      line-height: 1.3;
+      margin: 0;
+      margin-bottom: 40px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &__text {
+      color: $blue;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &.-dark {
+        font-weight: 600;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+      display: inline-block;
+
+      &.-shadow {
+        border: 5px solid $white;
+        box-shadow: 0 10px 20px 1px rgba(0,0,0,.15);
+        margin-bottom: 60px;
+        margin-top: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
