@@ -111,29 +111,31 @@
 
     &__video {
       border: 5px solid $white;
-      padding-bottom: 200px;
+      padding-bottom: 56.5%;
       overflow: hidden;
       height: 0;
       margin-bottom: 20px;
+      position: relative;
       
       @include mq(md) {
         margin-bottom: 0;
         top: 0;
         position: absolute;
-        padding-bottom: 370px;
+        padding-bottom: 320px;
         width: 600px;
         left: 50%;
         transform: translateX(-50%);
       }
 
       iframe {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
         width: 100%;
-        height: 200px;
-
-        @include mq(md) {
-          height: 370px;
-
-        }
+        height: 100%;
+        border: none;
       }
     }
   }
@@ -141,6 +143,7 @@
   &__about {
     background: $blueGray;
     position: relative;
+    z-index: 2;
 
     &__container {
       @include mq(md) {
@@ -210,6 +213,7 @@
       width: 100%;
       height: 100%;
       opacity: .3;
+      pointer-events: none;
     }
 
     &__title {
