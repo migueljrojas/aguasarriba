@@ -145,11 +145,24 @@
     position: relative;
     z-index: 2;
 
+    &__logo {
+      position: absolute;
+      top: -20%;
+      left: 7%;
+      width: 350px;
+
+      img {
+        width: 100%;
+        height: auto;
+        filter: brightness(1500%);
+      }
+    }
+
     &__container {
       @include mq(md) {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
+        // transform: translateY(-50%);
         left: 0;
         right: 0;
         margin: auto;

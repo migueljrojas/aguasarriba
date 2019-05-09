@@ -96,7 +96,7 @@
   &__productos {
     
     @include mq(md) {
-      margin-top: -300px;
+      margin-top: -400px;
     }
 
     &__wrapper {
@@ -146,6 +146,10 @@
         width: auto;
         height: 100%;
       }
+    }
+
+    &__container-bottom {
+      color: $blue;
     }
 
     &__content {

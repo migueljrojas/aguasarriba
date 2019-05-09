@@ -98,7 +98,15 @@
     $c: &;
 
     background: $blueGray;
-    
+
+    &__main-wrapper {
+      @include mq(md) {
+        position: relative;
+        margin-top: -250px;
+        z-index: 5;
+      }
+    }
+
     &__wrapper {
       @include trans;
 

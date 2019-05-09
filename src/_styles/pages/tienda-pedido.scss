@@ -99,7 +99,7 @@
     z-index: 3;
     
     @include mq(md) {
-      margin-top: -400px;
+      margin-top: -450px;
     }
 
     &__wrapper {
@@ -179,6 +179,7 @@
     &__price {
       text-transform: uppercase;
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
     &__select {
@@ -212,7 +213,19 @@
     &__input-group {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin-bottom: 40px;
+    }
+
+    &__checkbox {
+      margin-right: 10px !important;
+      margin-top: 0 !important;
+      appearance: none;
+      line-height: normal;
+    }
+
+    &__label {
+      margin: 0;
     }
 
     &__container-group {

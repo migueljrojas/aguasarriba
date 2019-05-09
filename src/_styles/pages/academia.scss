@@ -498,11 +498,23 @@
 
   &__owner  {
     padding: 60px 0 40px 0;
-    
+    position: relative;
     @include mq(md) {
       padding: 100px 0 80px 0;
     }
 
+    &__logo {
+      position: absolute;
+      width: 300px;
+      top: -8%;
+      left: 5%;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
     &__title {
       color: $blue;
       text-transform: uppercase;
